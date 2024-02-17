@@ -1,0 +1,90 @@
+#skills{
+    margin: 20px 0 150px;
+}
+
+#skills .skills-header-container{
+    margin: 40px 20px;
+    text-align: left;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.skills-container{
+    display: flex;
+    /* margin: 0 20px; */
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+
+.skills-container .front-container,.skills-container .back-container, .skills-container .other-container{
+    width: 25rem;
+    background-color: rgb(37,52,80);
+    color: white;
+    padding: 30px 0;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin: 20px;
+}
+
+.skills-container .front-container .front-header,.skills-container .back-container .back-header, .skills-container .other-container .other-header{
+    font-size: 1.35rem;
+}
+
+.skills-container .back-container{
+    background-color: linear-gradient(to bottom left, rgb(0, 87, 138) , rgb(133, 133, 133));
+
+}
+.front-container .front-body,.back-container .back-body, .other-container .other-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-container .front-body .list-wrapper,.back-container .back-body .list-wrapper, .other-container .other-body .list-wrapper{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.front-container .front-body .list-wrapper > i,.back-container .back-body .list-wrapper > i, .other-container .other-body .list-wrapper > i{
+    margin: 0 10px;
+}
+
+.front-container .front-body .html{
+    color: rgb(216,73,36);
+}
+.front-container .front-body .css{
+    color: rgb(48,160,209);
+}
+.front-container .front-body .javascript{
+    color: rgb(234,212,28);
+}
+.front-container .front-body .react{
+    color: rgb(92,207,238);
+}
+.front-container .front-body .bootstrap{
+    color: rgb(110,16,234);
+}
+.back-container .back-body .node{
+    color: rgb(132,187,0);
+}
+.back-container .back-body .apis{
+    color: rgb(138, 141, 129);
+}
+.back-container .back-body .webSockets{
+    color: rgb(242,97,0);
+}
+.back-container .back-body .mongo{
+    color: rgb(75,161,62);
+}
+.other-container .other-body .unity{
+    color: rgb(121,121,121);
+}
+.other-container .other-body .cpp{
+    color: rgb(98,149,203);
+}
+
