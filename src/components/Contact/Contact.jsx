@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import axios from 'axios'
 import "./Contact.css"
 import Modal from '../Modal/Modal';
@@ -70,13 +70,15 @@ function Contact() {
           </div>
           <div className="contact-medias">
             <div className='media-container'>
-              <a onClick={openMails}><i class="fa-solid fa-envelope"></i></a>
+              <button onClick={openMails} className="mail-button">
+                <i className="fa-solid fa-envelope"></i>
+              </button>
             </div>
             <div className='media-container'>
-              <a href="https://github.com/wliu1211"><i class="fa-brands fa-github"></i></a>
+              <a href="https://github.com/wliu1211"><i className="fa-brands fa-github"></i></a>
             </div>
             <div className='media-container'>
-              <a href="https://www.linkedin.com/in/will-liu-5b1142210/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/will-liu-5b1142210/"><i className="fa-brands fa-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -84,11 +86,11 @@ function Contact() {
       <Modal title="Mail Accounts" isOpen={modal} close={setModal}>
         <div className="account-container">
           <div className="account-item-wrapper">
-            <i class="fa-brands fa-google"></i>
+            <i className="fa-brands fa-google"></i>
             <p>willliu2001@gmail.com</p>
           </div>
           <div className="account-item-wrapper">
-            <i class="fa-brands fa-microsoft"></i>
+            <i className="fa-brands fa-microsoft"></i>
             <p>wliu684@outlook.com</p>
           </div>
 

@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react'
-import Modal from '../Modal/Modal';
+import React from 'react'
 
 function ProjectCard({project}) {
-    const {name, animateType, animateDelay,icon, description, skills, github} = project;
+    const {name, animateType, animateDelay, icon, description, skills, github} = project;
 
     const openSource = (e) => {
         e.stopPropagation();
     }
+    
   return (
     <>
         <div className="card-container" data-aos={animateType} data-aos-delay={animateDelay}>
@@ -14,19 +14,28 @@ function ProjectCard({project}) {
                 <h3>{name}</h3>
                 {icon}
             </div>
+            {skills && skills.length > 0 ? (
+                <div className="card-skills">
+                    {skills.map((skill, index)=> (
+                        <p key={index}>{skill}</p>
+                    ))}
+                </div>
+            ) : (
+                <div className="card-skills-placeholder"></div>
+            )}
             <div className="card-description">
                 <p>{description}</p>
             </div>
-            <div className="card-skills">
-                {skills.map((skill)=> (
-                    <p>{skill}</p>
-                ))}
-            </div>
             <div className="card-cta">
-                <button className="open-source-btn" onClick={openSource}>
-                    <a href={github}>Open Source</a>
-                    <i class="fa-brands fa-github"></i>
-                </button>
+                {github && (
+                    <button className="open-source-btn" onClick={openSource}>
+                        <a href={github}>Open Source</a>
+                        <i className="fa-brands fa-github"></i>
+                    </button>
+                )}
+                {!github && (
+                    <span className="coming-soon">Coming Soon</span>
+                )}
             </div>
         </div>
     </>
