@@ -1,0 +1,98 @@
+#projects{
+    margin: 50px 0 150px;
+}
+
+#projects .project-header-container{
+    margin: 40px 20px;
+    font-size: 2rem;
+    width: fit-content;
+}
+.cards-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    /* background-color: red; */
+    height: fit-content;
+}
+.card-container{
+    max-width: 25rem;
+    width: 100%;
+    height: var(--size-270);
+    border: 1px solid white;
+    border-radius: 10px;
+    position: relative;
+    margin: 15px;
+    background-color: rgb(37, 52, 80);
+}
+
+#projects .card-container:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+    z-index: 100;
+}
+
+.card-container .card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    font-size: 1.25rem;
+    padding: 25px;
+}
+.card-container .card-description{
+    max-width: var(--size-350);
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 10px 20px;
+}
+.card-container .card-description >p{
+    color: rgb(102, 199, 255);
+}
+.card-container .card-skills{
+    font-size: 0.75rem;
+    display: flex;
+}
+.card-container .card-skills>p{
+    padding: 10px 20px;
+    color: rgb(104, 151, 204);
+}
+
+.card-container .card-cta{
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.card-container .card-cta .open-source-btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(37, 52, 80);
+    border: 1px solid white;
+}
+.card-container .card-cta .open-source-btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.card-container .card-cta .open-source-btn a{
+    color: white;
+    text-decoration: none;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.card-container .card-cta .open-source-btn i{
+    color: white;
+}
+
+#projects .project-video-container iframe{
+    max-width: 700px;
+    height: 400px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* CARD ANIMATIONS */
